@@ -137,7 +137,7 @@ export default function Home({
           </section>
 
           {/* Work Experience Section */}
-          <section id="about" id="projects" className="mb-16">
+          <section id="about"  className="mb-16">
             <Particles
               className="absolute inset-0 -z-10 animate-fade-in"
               quantity={100}
