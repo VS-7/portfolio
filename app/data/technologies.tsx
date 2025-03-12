@@ -3,16 +3,25 @@ import {
   FaNodeJs, 
   FaPython, 
   FaDocker, 
-  FaAws 
+  FaAws, 
+  FaGit, 
+  FaJava 
 } from 'react-icons/fa';
 import { 
   SiTypescript, 
   SiNextdotjs, 
-  SiGraphql,
-  SiTailwindcss,
-  SiMongodb,
-  SiPostgresql,
-  SiRedis
+  SiTailwindcss, 
+  SiMongodb, 
+  SiPostgresql, 
+  SiRedis, 
+  SiExpress, 
+  SiCplusplus, 
+  SiSpring, 
+  SiHibernate, 
+  SiFirebase, 
+  SiFlutter, 
+  SiDart, 
+  SiMysql
 } from 'react-icons/si';
 
 export const technologies = [
@@ -52,11 +61,6 @@ export const technologies = [
     color: "text-[#2496ED]" // Docker blue
   },
   { 
-    name: "GraphQL", 
-    icon: <SiGraphql className="w-8 h-8" />, 
-    color: "text-[#E10098]" // GraphQL pink
-  },
-  { 
     name: "Tailwind", 
     icon: <SiTailwindcss className="w-8 h-8" />, 
     color: "text-[#06B6D4]" // Tailwind cyan
@@ -75,5 +79,55 @@ export const technologies = [
     name: "Redis", 
     icon: <SiRedis className="w-8 h-8" />, 
     color: "text-[#DC382D]" // Redis red
+  },
+  { 
+    name: "Java", 
+    icon: <FaJava className="w-8 h-8" />, 
+    color: "text-[#007396]" // Java blue
+  },
+  { 
+    name: "Express", 
+    icon: <SiExpress className="w-8 h-8" />, 
+    color: "text-[#000000]" // Express black
+  },
+  { 
+    name: "C++", 
+    icon: <SiCplusplus className="w-8 h-8" />, 
+    color: "text-[#00599C]" // C++ blue
+  },
+  { 
+    name: "Spring Boot", 
+    icon: <SiSpring className="w-8 h-8" />, 
+    color: "text-[#6DB33F]" // Spring green
+  },
+  { 
+    name: "Hibernate", 
+    icon: <SiHibernate className="w-8 h-8" />, 
+    color: "text-[#59666C]" // Hibernate grey
+  },
+  { 
+    name: "SQL", 
+    icon: <SiMysql className="w-8 h-8" />, 
+    color: "text-[#4479A1]" // MySQL blue
+  },
+  { 
+    name: "Git", 
+    icon: <FaGit className="w-8 h-8" />, 
+    color: "text-[#F05032]" // Git orange
+  },
+  { 
+    name: "Firebase", 
+    icon: <SiFirebase className="w-8 h-8" />, 
+    color: "text-[#FFCA28]" // Firebase yellow
+  },
+  { 
+    name: "Flutter", 
+    icon: <SiFlutter className="w-8 h-8" />, 
+    color: "text-[#02569B]" // Flutter blue
+  },
+  { 
+    name: "Dart", 
+    icon: <SiDart className="w-8 h-8" />, 
+    color: "text-[#0175C2]" // Dart blue
   },
 ]; 

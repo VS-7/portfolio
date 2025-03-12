@@ -38,5 +38,13 @@ export const projects = [
     slug: "ifcolab",
     repository: "yourusername/another-repo",
     url: "https://another-project-url.com"
+  },
+  {
+    title: "Paint-Brush",
+    description: "Another interesting project with its own unique description.",
+    image: "/assets/projeto6.png",
+    slug: "paint-brush",
+    repository: "yourusername/another-repo",
+    url: "https://another-project-url.com"
   }
 ]; 

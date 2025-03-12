@@ -16,7 +16,6 @@ import { projects } from "./data/projects";
 import { experiences } from "./data/experiences";
 import { content } from "./data/content";
 
-
 export default function Home({
   searchParams,
 }: {
@@ -24,11 +23,12 @@ export default function Home({
 }) {
   const currentLang = (searchParams.lang as string) || 'pt-BR';
   const t = content[currentLang as keyof typeof content];
+  const exp = experiences[currentLang as keyof typeof experiences];
 
   return (
     <div className="flex flex-col min-h-screen pt-40 overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24">
-        <Navigation />
+        <Navigation lang={currentLang} />
       </div>
 
       <Particles
@@ -60,11 +60,10 @@ export default function Home({
         </div>
       </section>
 
-
       {/* Main Content */}
       <main className="flex-1 container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 pt-16 pb-16">
         {/* Hero Section */}
-        <div className="flex flex-col items-center md:items-start gap-8 mb-16 pt-10">
+        <div id="about" className="flex flex-col items-center md:items-start gap-8 mb-16 pt-10">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="relative w-64 h-64 overflow-hidden rounded-full border-2 border-zinc-600/50">
               <Image
@@ -136,13 +135,13 @@ export default function Home({
               ))}
             </div>
           </section>
-          {/* Work Experience Section */}
-          <section className="mb-16">
 
+          {/* Work Experience Section */}
+          <section id="experience" className="mb-16">
             <Particles
-        className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={100}
-      />  
+              className="absolute inset-0 -z-10 animate-fade-in"
+              quantity={100}
+            />  
             
             <h2 className="text-2xl text-zinc-300 mb-8 text-center">
               {t.workExperience.title}
@@ -154,15 +153,15 @@ export default function Home({
               
               {/* Experiências - reduzido o space-y de 24 para 16 */}
               <div className="space-y-16">
-                {experiences.map((exp, index) => (
+                {exp.map((experience, index) => (
                   <div key={index} className="relative group">
                     {/* Ícone do planeta (sempre no centro) */}
                     <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                       <div className={`w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800
-                        shadow-lg ${exp.glowColor} flex items-center justify-center overflow-hidden
+                        shadow-lg ${experience.glowColor} flex items-center justify-center overflow-hidden
                         transition-all duration-300 group-hover:scale-110 group-hover:border-zinc-700`}>
                         <Image
-                          src={exp.planetImage}
+                          src={experience.planetImage}
                           alt="Planet"
                           width={48}
                           height={48}
@@ -177,19 +176,19 @@ export default function Home({
                       <div className={`${index % 2 === 0 ? 'col-start-2' : 'col-start-1'} 
                         p-4 transition-all duration-300`}>
                         <div className="flex items-baseline gap-2 mb-1">
-                          <span className="text-sm text-emerald-400 font-mono">{exp.period}</span>
+                          <span className="text-sm text-emerald-400 font-mono">{experience.period}</span>
                           <span className="text-zinc-500">•</span>
-                          <span className="text-zinc-300">{exp.company}</span>
+                          <span className="text-zinc-300">{experience.company}</span>
                         </div>
                         
                         <h3 className="text-lg text-zinc-200 mb-2 
                           transition-colors duration-300 group-hover:text-emerald-400">
-                          {exp.position}
+                          {experience.position}
                         </h3>
                         
                         <p className="text-zinc-400 text-sm leading-relaxed
                           transition-colors duration-300 group-hover:text-zinc-300">
-                          {exp.description}
+                          {experience.description}
                         </p>
                       </div>
                       
@@ -202,10 +201,8 @@ export default function Home({
             </div>
           </section>
 
-        
-
           {/* Projects Section */}
-          <section>
+          <section id="projects">
             <h2 className="text-2xl text-zinc-300 mb-8 text-center md:text-left">
               {t.projects.title}
             </h2>

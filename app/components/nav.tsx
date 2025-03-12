@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 const navigation = [
 	{ name: "Início", href: "/" },
 	{ name: "Sobre", href: "#about" },
+	{ name: "Experiência", href: "#experience" },
 	{ name: "Projetos", href: "#projects" },
 ];
 
@@ -45,10 +46,12 @@ export const Navigation: React.FC<{ lang?: string }> = ({ lang = 'pt-BR' }) => {
 								</Link>
 							))}
 							<Link
-								href="/schedule"
+								href="https://wa.me/5533999123315"
 								className="relative ml-1 sm:ml-2 px-2 sm:px-4 py-2 text-xs sm:text-sm text-emerald-400 hover:text-emerald-300 transition-colors bg-zinc-800 rounded-full border border-zinc-700"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
-								Agendar chamada
+								Entrar em contato
 							</Link>
 						</nav>
 					</div>
