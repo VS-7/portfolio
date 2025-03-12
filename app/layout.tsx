@@ -7,18 +7,18 @@ import { Analytics } from "./components/analytics";
 export const metadata: Metadata = {
   title: {
     default: "Vitor Sérgio",
-    template: "%s | vitorsergio.com",
+    template: "%s | vitorsergio.site",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Portfolio de Vitor Sérgio, desenvolvedor fullstack e Ciêntista da Computação.",
   openGraph: {
-    title: "vitorsergio.com",
+    title: "vitorsergio.site",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://vitorsergio.com",
-    siteName: "vitorsergio.com",
+      "Portfolio de Vitor Sérgio, desenvolvedor fullstack e Ciêntista da Computação.",
+    url: "https://vitorsergio.site",
+    siteName: "vitorsergio.site",
     images: [
       {
-        url: "https://vitorsergio.com/og.png",
+        url: "https://vitorsergio.site/og.png",
         width: 1920,
         height: 1080,
       },
