@@ -26,7 +26,7 @@ export default function Home({
   const exp = experiences[currentLang as keyof typeof experiences];
 
   return (
-    <div className="flex flex-col min-h-screen pt-40 overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+    <div className="flex flex-col min-h-screen pt-0 sm:pt-40 overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24">
         <Navigation lang={currentLang} />
       </div>
@@ -93,7 +93,7 @@ export default function Home({
                   GitHub
                 </Link>
                 <Link 
-                  href="https://linkedin.com/in/yourusername" 
+                  href="https://www.linkedin.com/in/vitor-s%C3%A9rgio-1a8977262/" 
                   className="flex items-center gap-2 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-100 bg-zinc-800/50 rounded-full border border-zinc-600/50 hover:border-zinc-600 transition-colors"
                   target="_blank"
                 >
@@ -101,7 +101,7 @@ export default function Home({
                   LinkedIn
                 </Link>
                 <Link 
-                  href="mailto:your@email.com" 
+                  href="mailto:vitorsergio.ts@hotmail.com" 
                   className="flex items-center gap-2 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-100 bg-zinc-800/50 rounded-full border border-zinc-600/50 hover:border-zinc-600 transition-colors"
                 >
                   <MdEmail className="w-5 h-5" />
@@ -267,14 +267,14 @@ export default function Home({
                 <FaGithub className="w-5 h-5" />
               </Link>
               <Link 
-                href="https://linkedin.com/in/yourusername" 
+                href="https://www.linkedin.com/in/vitor-s%C3%A9rgio-1a8977262/" 
                 className="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
                 target="_blank"
               >
                 <FaLinkedin className="w-5 h-5" />
               </Link>
               <Link 
-                href="mailto:your@email.com" 
+                href="mailto:vitorsergio.ts@hotmail.com" 
                 className="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
               >
                 <MdEmail className="w-5 h-5" />
