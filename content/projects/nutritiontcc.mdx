@@ -1,0 +1,83 @@
+---
+title: "NutritionTCC"
+description: "Aplicativo de recomendação alimentar que utiliza Algoritmo Genético para otimização nutricional, integrando Flutter, Firebase e uma base de dados nutricional extraída da TACO."
+repository: VS-7/nutrition_tcc
+date: "2025-03-21"
+image: "/assets/projeto3.png"
+published: true
+---
+
+O **NutritionTCC** é um aplicativo de recomendação alimentar que visa auxiliar os usuários a alcançarem uma dieta equilibrada e personalizada, utilizando técnicas avançadas de otimização. A solução integra um Algoritmo Genético adaptado para resolver uma variação do Problema da Dieta e oferece uma interface intuitiva desenvolvida com Flutter.
+
+- **Otimização Nutricional:** Combinação de alimentos para criar refeições balanceadas.
+- **Tecnologias Modernas:** Desenvolvimento com Flutter e integração com Firebase.
+- **Base de Dados Completa:** Alimentação baseada na Tabela Brasileira de Composição de Alimentos (TACO).
+
+## Visão Geral do Projeto
+
+O aplicativo foi concebido para oferecer recomendações alimentares personalizadas, considerando as necessidades nutricionais diárias dos usuários. Com uma abordagem centrada no usuário, o projeto utiliza metodologias de design que envolvem a criação de personas e cenários de uso, garantindo que a experiência seja intuitiva e eficaz.
+
+## Modelagem e Arquitetura de Dados
+
+### Base de Dados Nutricional
+- **Fonte dos Dados:** Utiliza a 4ª edição da TACO, contendo informações detalhadas de 597 alimentos, dos quais foi selecionado um subconjunto de 294 itens para compor o planejamento das refeições.
+- **Estrutura Relacional:** Os dados são organizados em um banco de dados **SQLite**, permitindo uma consulta rápida e atualização eficiente, com sincronização via **Firebase** para backup e acesso em tempo real.
+- **Categorias Alimentares:** Os alimentos estão organizados em grupos (Cereais, Carnes, Lácteos, Vegetais, Frutas, Bebidas etc.) para assegurar que as recomendações respeitem as proporções ideais de nutrientes.
+
+## Desenvolvimento e Tecnologias Utilizadas
+
+### Flutter & Dart
+O aplicativo foi desenvolvido utilizando o framework **Flutter** com a linguagem **Dart**, possibilitando a criação de interfaces nativas para Android, iOS e Web a partir de uma única base de código.  
+*[Inserir imagem: "Protótipo da Tela Inicial - Exemplo de Interface Desenvolvida com Flutter"]*
+
+### Firebase
+A plataforma **Firebase** foi integrada para oferecer autenticação de usuários, sincronização de dados e armazenamento seguro, garantindo que as preferências e histórico de refeições estejam sempre atualizados e acessíveis.
+
+## Algoritmo Genético para Otimização Nutricional
+
+O núcleo do sistema é um **Algoritmo Genético** que simula processos evolutivos para encontrar a melhor combinação de alimentos. O fluxo do algoritmo é dividido em:
+
+1. **Representação da Solução:**  
+   Cada solução é representada como um vetor que define um conjunto de alimentos para as quatro refeições diárias (café da manhã, almoço, lanche e jantar).  
+   *[Inserir imagem: "Fluxograma do Algoritmo Genético"]*
+
+2. **Inicialização da População:**  
+   A população inicial é gerada aleatoriamente para explorar diversas combinações.
+
+3. **Função de Fitness:**  
+   Avalia cada solução com base na aderência aos requisitos nutricionais (macronutrientes, vitaminas, minerais, etc.) e na minimização de desvios das recomendações diárias.
+
+4. **Operadores Genéticos:**  
+   - **Cruzamento (Crossover):** Combina partes de soluções para gerar descendentes.
+   - **Mutação:** Introduz variações aleatórias para manter a diversidade e evitar soluções subótimas.
+   - **Seleção:** Escolhe os indivíduos mais aptos para as próximas gerações.
+
+5. **Critério de Parada:**  
+   O algoritmo itera por um número definido de gerações ou até que se atinja a convergência ideal em termos nutricionais.
+
+## Processo de Desenvolvimento e Design Centrado no Usuário
+
+### Levantamento de Requisitos e Criação de Personas
+- **Análise de Mercado:**  
+  Foram estudados aplicativos de nutrição existentes e pesquisas acadêmicas para identificar lacunas e oportunidades.
+- **Personas e Cenários:**  
+  Foram criadas personas detalhadas (como usuários em busca de perda de peso, atletas ou indivíduos com restrições alimentares) para orientar o design e as funcionalidades do aplicativo.  
+  *[Inserir imagem: "Exemplo de Persona e Cenário de Uso"]*
+
+### Estrutura Funcional e Fluxo de Navegação
+- **Diagrama de Fluxo:**  
+  Um fluxograma detalhado mapeia todas as páginas e funcionalidades principais – desde o onboarding e registro até o gerenciamento de refeições e sistema de recomendações.  
+  *[Inserir imagem: "Diagrama de Fluxo das Funcionalidades"]*
+- **Design da Interface:**  
+  O design foi cuidadosamente elaborado para ser intuitivo e responsivo, aproveitando os recursos avançados do Flutter para criar uma experiência visual agradável.
+
+## Build & Execução
+
+Para iniciar o aplicativo durante o desenvolvimento, utilize os seguintes comandos:
+
+```sh-session
+# Instale as dependências
+flutter pub get
+
+# Execute o aplicativo em modo de desenvolvimento
+flutter run

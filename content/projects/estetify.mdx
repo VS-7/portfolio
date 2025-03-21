@@ -1,0 +1,135 @@
+---
+title: "Estetify"
+description: "Plataforma para gerenciamento de clínicas de estética, oferecendo controle de clientes, agendamentos e relatórios, com segurança e eficiência."
+repository: VS-7/plataforma-estetify
+date: "2025-03-21"
+published: true
+---
+
+# Estetify
+
+## Índice
+1. [Introdução](#introdução)
+2. [Modelagem](#modelagem)  
+   - [Quadro Scrum](#quadro-scrum)  
+   - [Diagrama de Casos de Uso](#diagrama-de-casos-de-uso)  
+   - [Diagrama de Classes](#diagrama-de-classes)  
+   - [Diagrama Entidade-Relacionamento](#diagrama-entidade-relacionamento)  
+   - [Diagramas de Sequência](#diagramas-de-sequência)  
+3. [Tecnologias Utilizadas](#tecnologias-utilizadas)  
+4. [Admin Padrão](#admin-padrão)  
+
+---
+
+## Introdução
+
+O **Estetify** é uma plataforma desenvolvida para o gerenciamento completo de clínicas de estética. Nosso objetivo é otimizar a organização e a eficiência das operações clínicas, proporcionando uma experiência aprimorada para administradores, profissionais e clientes.
+
+### Vídeo Demonstrativo
+<iframe 
+  width="100%" 
+  height="515" 
+  src="https://www.youtube.com/embed/1g6IwOrz0p4" 
+  title="Demonstração Estetify" 
+  frameBorder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowFullScreen
+></iframe>
+
+Com o Estetify, é possível:
+- **Gerenciar cadastros de clientes**  
+- **Agendar procedimentos**  
+- **Administrar profissionais e horários**  
+- **Gerar relatórios detalhados**  
+
+A plataforma oferece um ambiente seguro, com login protegido por senha e diferentes níveis de permissão para os usuários.
+
+---
+
+## Modelagem
+
+### Quadro Scrum
+
+O desenvolvimento do Estetify segue a metodologia ágil **Scrum**, permitindo um gerenciamento eficiente do projeto através de sprints e priorização de tarefas. O quadro de tarefas pode ser acessado através do Trello.
+
+[Acesse o quadro Scrum aqui](https://trello.com/invite/b/671fe8958ac0b1bdcec3f8c2/ATTIe0bde08e1966c5ac09cdfa85c1502dd517AFBA4D/sistema-de-gerenciamento-de-clinica-de-estetica).
+
+---
+
+### Diagrama de Casos de Uso
+
+O Diagrama de Casos de Uso apresenta as interações entre usuários e o sistema, demonstrando os principais cenários:
+- Cadastro de clientes  
+- Agendamento de procedimentos  
+- Gerenciamento de profissionais e agenda  
+- Geração de relatórios  
+
+![Diagrama de Caso de Uso](https://github.com/VS-7/plataforma-estetify/blob/main/docs/clinicaEsteticaDiagramaCasoDeUso.png?raw=true)
+
+---
+
+### Diagrama de Classes
+
+O diagrama de classes descreve a estrutura do sistema, incluindo as relações entre clientes, profissionais, agendamentos e relatórios.  
+
+![Diagrama de Classes](https://github.com/VS-7/plataforma-estetify/blob/main/docs/estetifyDiagramaClasses.jpg?raw=true)
+
+---
+
+### Diagrama Entidade-Relacionamento
+
+O Diagrama Entidade-Relacionamento (DER) ilustra a organização dos dados no banco de dados, incluindo entidades como:
+- Clientes  
+- Profissionais  
+- Procedimentos  
+- Agendamentos  
+
+![Diagrama Entidade-Relacionamento](https://github.com/VS-7/plataforma-estetify/blob/main/docs/estetifyDiagramaER.png?raw=true)
+
+---
+
+### Diagramas de Sequência
+
+#### 1. Gerenciar Procedimentos  
+Fluxo para o gerenciamento de procedimentos na plataforma.  
+![Diagrama de Sequência de Agendamento](https://github.com/VS-7/plataforma-estetify/blob/main/docs/estetifyDiagramaSequenciaProcedimento.png?raw=true)
+
+#### 2. Geração de Relatórios  
+Processo para gerar relatórios de desempenho e histórico de procedimentos.  
+![Diagrama de Sequência de Relatórios](https://github.com/VS-7/plataforma-estetify/blob/main/estetifyDiagramaSequenciaRelatorio.png?raw=true)
+
+#### 3. Geração de Feedbacks  
+Representação do fluxo de coleta de feedbacks dos pacientes.  
+![Diagrama de Sequência de Feedback](https://github.com/VS-7/plataforma-estetify/blob/main/docs/estetifyDiagramaSequenciaFeedbackPaciente.png?raw=true)
+
+---
+
+## Tecnologias Utilizadas
+
+### Desenvolvimento
+- **Java**: Backend principal  
+- **MySQL**: Banco de dados relacional  
+- **Hibernate**: ORM para mapeamento objeto-relacional  
+- **JavaMail**: Envio de notificações e e-mails automatizados  
+- **iTextPDF**: Geração de relatórios em PDF  
+- **BCrypt**: Criptografia de senhas  
+
+### Interface Gráfica
+- **Swing**: Desenvolvimento da interface desktop  
+
+### Ferramentas de Apoio
+- **Apache NetBeans**: IDE utilizada no projeto  
+- **Maven**: Gerenciamento de dependências  
+- **Git/GitHub**: Controle de versão  
+- **StarUML**: Modelagem UML  
+- **Trello**: Organização e planejamento ágil  
+
+---
+
+## Admin Padrão
+
+1. Para realizar o primeiro login no sistema, utilize as seguintes credenciais:  
+   - **Email:** plataformaestetify@gmail.com  
+   - **Senha:** 123456  
+
+---
